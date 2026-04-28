@@ -48,26 +48,24 @@ The project includes several visual views:
 
 ```text
 .
-├── index.js
-├── package.json
-├── package-lock.json
 ├── README.md
-├── fonts/
-├── readme_imgs/
-└── public/
-    ├── index.html
-    ├── charts.html
-    ├── developmentStats.html
-    ├── HarryPotter.html
-    ├── HermioneGranger.html
-    ├── RonWeasley.html
-    ├── AlbusDumbledore.html
-    ├── RubeusHagrid.html
-    ├── main.css
-    ├── myD3app.js
-    ├── donutchart.js
-    ├── smallMultiples.js
-    └── data files
+├── readme_imgs/                 # README screenshots
+└── viz_project_d3/
+    ├── README.md
+    ├── index.js                 # local server
+    ├── package.json
+    ├── package-lock.json
+    ├── index.html               # landing page
+    ├── charts.html              # main overview page
+    ├── developmentStats.html    # small multiples page
+    ├── [character].html         # character-specific pages
+    ├── fonts/                   # custom font
+    └── public/
+        ├── main.css             # styling
+        ├── myD3app.js           # main overview visualizations
+        ├── donutchart.js        # character-specific visualizations
+        ├── smallMultiples.js    # development statistics view
+        └── *.csv                # preprocessed data files
 ```
 
 ## Main files
