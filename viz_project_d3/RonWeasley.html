@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Tutorial - Donut Chart</title>
+    <link href="main.css" rel="stylesheet">
+    <script type="module" src="donutchart.js"></script>
+    <style>
+      body {
+        position: relative;
+        opacity: 0;
+        transition: opacity 0.2s ease; /* Add a smooth opacity transition */
+      } 
+      
+    </style>
+  </head>
+  
+  <body>  
+    <div id="frameContainer">
+      <div id="text_div"></div> 
+      <div id="donutchart_div"></div>
+      <div id="barchartSpot_div"></div>
+      
+      <!-- Call the drawDonutChart function with parameters -->
+      <script type="module">
+          
+        import { main } from "./donutchart.js";
+        main("Ron Weasley", "#text_div", "#donutchart_div", "#barchartSpot_div");
+
+      </script>
+      
+      <button id="redirectDonutToCharts">back to overall stats</button>
+      <script>
+          // Wait for the content to load before fading it in
+          window.addEventListener("load", function() {
+          // Set opacity to 1 to trigger the fade-in effect
+          document.body.style.opacity = "1";
+          });
+
+          document.getElementById("redirectDonutToCharts").addEventListener("click", function() {
+          window.location.href = "charts.html";
+          });
+      </script>
+    </div>
+  </body>
+</html>

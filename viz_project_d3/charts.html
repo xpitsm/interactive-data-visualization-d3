@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Tutorial - Charts</title>
+    <link href="main.css" rel="stylesheet">
+    <script type="module" src="myD3app.js"></script>
+    <style>
+      body {
+        position: relative;
+        opacity: 0; /* Set initial opacity to 0 */
+        transition: opacity 0.5s ease; /* Add a smooth opacity transition */
+      }
+
+      #redirectToHome {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: #D3AC2B;
+        color: #333D51;
+        letter-spacing: .03rem;
+        opacity: 0.9;
+        padding: 7px; /* Adjust the padding to make it smaller */
+        border: none;
+        border-radius: 5px;
+        font-family: 'Monaco';
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 4px;
+        margin-right: -10px;
+      }
+
+      #overallStats {
+        position: absolute;
+        right: 400px;
+        top: 150px;
+        background-color: #cde0ed6c;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frameContainerB">
+
+      <div id="text_div"></div>
+      <div id="areachart_div"></div>
+      <div id ="scaledUp_div"></div>
+      <div id="lollipop_div">
+        <!-- Rounded switch -->
+        <button class="button" style="vertical-align:middle"><span>development </span></button>
+      </div>
+      <div id="barchart_div"></div>
+      <div id="barchart_div_spell"></div>
+
+      <button id="redirectToHome">mischief managed</button>
+
+      <script>
+        // Wait for the content to load before fading it in
+        window.addEventListener("load", function() {
+          // Set opacity to 1 to trigger the fade-in effect
+          document.body.style.opacity = "1";
+        });
+
+        document.getElementById("redirectToHome").addEventListener("click", function() {
+          window.location.href = "/";
+        });
+
+        document.querySelector(".button").addEventListener("click", function() {
+          window.location.href = "developmentStats";
+        });
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Tutorial - Home</title>
+    <style>
+      @font-face {
+        font-family: 'HP';
+        src: url('/fonts/HarryP-MVZ6w.ttf') format('truetype');
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #333D51; /*#f0f0f0*/
+        transition: background-color 0.5s ease; /* Add a smooth background color transition */
+      }
+
+      .content-container {
+        text-align: center;
+        opacity: 1;
+        transition: opacity 0.5s ease; /* Add a smooth opacity transition */
+      }
+
+      #swearText {
+        font-family: 'HP';
+        font-size: 3.5rem;
+        letter-spacing: 0.2rem;
+        color: #D3AC2B;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      #redirectToCharts {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Hide the content container when fading out */
+      body.fade-out .content-container {
+        opacity: 0;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="content-container">
+      <p id="swearText">I solemnly swear that I am up to no good</p>
+      <input type="checkbox" id="redirectToCharts">
+    </div>
+
+    <script>
+      document.getElementById("redirectToCharts").addEventListener("change", function() {
+        if (this.checked) {
+          // Add the 'fade-out' class to the body to trigger the fade-out effect
+          document.body.classList.add("fade-out");
+
+          // Delay the redirection by 500 milliseconds (0.5 seconds)
+          setTimeout(() => {
+            window.location.href = "charts.html";
+          }, 500);
+        }
+      });
+    </script>
+  </body>
+</html>
