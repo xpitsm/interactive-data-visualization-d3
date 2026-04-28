@@ -53,7 +53,7 @@ The project includes several visual views:
 ├── package-lock.json
 ├── README.md
 ├── fonts/
-├── screenshots/
+├── readme_imgs/
 └── public/
     ├── index.html
     ├── charts.html
